@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for responsive design and SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional brewing equipment and accessories at Bean Boutique">
+  <title>Brewing Equipment - Bean Boutique</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header section with navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo and brand name -->
+      <div class="nav-brand">
+        <i class="fas fa-coffee"></i>
+        <span>Bean Boutique</span>
+      </div>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="coffee-selection.html" class="nav-link">Coffee Selection</a></li>
+        <li><a href="brewing-equipment.html" class="nav-link active">Brewing Equipment</a></li>
+        <li><a href="shopping-cart.html" class="nav-link">Shopping Cart</a></li>
+        <li><a href="events.html" class="nav-link">Events & Workshops</a></li>
+        <li><a href="special-offers.html" class="nav-link">Special Offers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Brewing Equipment</h1>
+        <p>Professional tools for the perfect coffee experience</p>
+      </div>
+    </section>
+
+    <!-- Equipment categories -->
+    <section class="equipment-categories">
+      <div class="container">
+        <div class="category-tabs">
+          <button class="tab-btn active" onclick="showCategory('all')">All Equipment</button>
+          <button class="tab-btn" onclick="showCategory('espresso')">Espresso Machines</button>
+          <button class="tab-btn" onclick="showCategory('brewing')">Brewing Tools</button>
+          <button class="tab-btn" onclick="showCategory('grinders')">Grinders</button>
+          <button class="tab-btn" onclick="showCategory('accessories')">Accessories</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment grid -->
+    <section class="equipment-section">
+      <div class="container">
+        <div class="equipment-grid" id="equipmentGrid">
+          <!-- Equipment item 1 -->
+          <div class="equipment-card" data-category="espresso">
+            <div class="equipment-image">
+              <img src="espresso.png" width="1947" height="1300" alt="A close-up view of a professional espresso machine with syrup bottles in a coffee shop setting.">
+              <div class="equipment-overlay">
+                <button class="add-to-cart" onclick="addToCart('Professional Espresso Machine', 899.99)">Add to Cart</button>
+                <button class="view-details" onclick="showDetails('espresso-machine')">View Details</button>
+              </div>
+            </div>
+            <div class="equipment-info">
+              <h3>Professional Espresso Machine</h3>
+              <p class="equipment-description">Commercial-grade espresso machine with dual boiler system and precise temperature control.</p>
+              <div class="equipment-features">
+                <span><i class="fas fa-check"></i> Dual Boiler System</span>
+                <span><i class="fas fa-check"></i> PID Temperature Control</span>
+                <span><i class="fas fa-check"></i> 15 Bar Pressure</span>
+              </div>
+              <div class="equipment-details">
+                <span class="price">$899.99</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(4.9/5)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Equipment item 2 -->
+          <div class="equipment-card" data-category="brewing">
+            <div class="equipment-image">
+              <img src="maker.jpg" width="975" height="650" alt="Barista using syphon method to prepare coffee in a café setting. Indoors with coffee equipment.">
+              <div class="equipment-overlay">
+                <button class="add-to-cart" onclick="addToCart('Syphon Coffee Maker', 149.99)">Add to Cart</button>
+                <button class="view-details" onclick="showDetails('syphon-maker')">View Details</button>
+              </div>
+            </div>
+            <div class="equipment-info">
+              <h3>Syphon Coffee Maker</h3>
+              <p class="equipment-description">Traditional syphon brewing method for a clean, flavorful cup with theatrical presentation.</p>
+              <div class="equipment-features">
+                <span><i class="fas fa-check"></i> Borosilicate Glass</span>
+                <span><i class="fas fa-check"></i> Alcohol Burner Included</span>
+                <span><i class="fas fa-check"></i> 3-Cup Capacity</span>
+              </div>
+              <div class="equipment-details">
+                <span class="price">$149.99</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(4.6/5)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Equipment item 3 -->
+          <div class="equipment-card" data-category="grinders">
+            <div class="equipment-image">
+              <img src="grinder.png" width="434" height="650" alt="A cheerful barista stands confidently with folded arms in a stylish coffee shop.">
+              <div class="equipment-overlay">
+                <button class="add-to-cart" onclick="addToCart('Burr Coffee Grinder', 199.99)">Add to Cart</button>
+                <button class="view-details" onclick="showDetails('burr-grinder')">View Details</button>
+              </div>
+            </div>
+            <div class="equipment-info">
+              <h3>Burr Coffee Grinder</h3>
+              <p class="equipment-description">Precision burr grinder with 40 grind settings for consistent particle size.</p>
+              <div class="equipment-features">
+                <span><i class="fas fa-check"></i> 40 Grind Settings</span>
+                <span><i class="fas fa-check"></i> Conical Burrs</span>
+                <span><i class="fas fa-check"></i> Timer Function</span>
+              </div>
+              <div class="equipment-details">
+                <span class="price">$199.99</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(4.8/5)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Equipment item 4 -->
+          <div class="equipment-card" data-category="brewing">
+            <div class="equipment-image">
+              <img src="pour.jpg" width="366" height="650" alt="Barista in hijab brewing coffee in a Madiun café, Indonesia.">
+              <div class="equipment-overlay">
+                <button class="add-to-cart" onclick="addToCart('Pour Over Set', 79.99)">Add to Cart</button>
+                <button class="view-details" onclick="showDetails('pour-over')">View Details</button>
+              </div>
+            </div>
+            <div class="equipment-info">
+              <h3>Pour Over Brewing Set</h3>
+              <p class="equipment-description">Complete pour-over kit with dripper, filters, and gooseneck kettle.</p>
+              <div class="equipment-features">
+                <span><i class="fas fa-check"></i> Ceramic Dripper</span>
+                <span><i class="fas fa-check"></i> Gooseneck Kettle</span>
+                <span><i class="fas fa-check"></i> 100 Filters Included</span>
+              </div>
+              <div class="equipment-details">
+                <span class="price">$79.99</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(4.5/5)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Equipment item 5 -->
+          <div class="equipment-card" data-category="accessories">
+            <div class="equipment-image">
+              <img src="digital.png" width="975" height="650" alt="A worker in a coffee roastery operating equipment, processing fresh beans in an industrial setting.">
+              <div class="equipment-overlay">
+                <button class="add-to-cart" onclick="addToCart('Digital Scale', 39.99)">Add to Cart</button>
+                <button class="view-details" onclick="showDetails('digital-scale')">View Details</button>
+              </div>
+            </div>
+            <div class="equipment-info">
+              <h3>Precision Digital Scale</h3>
+              <p class="equipment-description">High-precision scale with timer function for accurate coffee brewing measurements.</p>
+              <div class="equipment-features">
+                <span><i class="fas fa-check"></i> 0.1g Precision</span>
+                <span><i class="fas fa-check"></i> Built-in Timer</span>
+                <span><i class="fas fa-check"></i> Waterproof Design</span>
+              </div>
+              <div class="equipment-details">
+                <span class="price">$39.99</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(4.4/5)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Equipment item 6 -->
+          <div class="equipment-card" data-category="accessories">
+            <div class="equipment-image">
+              <img src="milk.png" width="490" height="650" alt="Overhead view of technician operating coffee roasting equipment in an industrial setting.">
+              <div class="equipment-overlay">
+                <button class="add-to-cart" onclick="addToCart('Milk Frother', 29.99)">Add to Cart</button>
+                <button class="view-details" onclick="showDetails('milk-frother')">View Details</button>
+              </div>
+            </div>
+            <div class="equipment-info">
+              <h3>Electric Milk Frother</h3>
+              <p class="equipment-description">Professional milk frother for creating perfect foam for lattes and cappuccinos.</p>
+              <div class="equipment-features">
+                <span><i class="fas fa-check"></i> Hot & Cold Frothing</span>
+                <span><i class="fas fa-check"></i> Non-stick Coating</span>
+                <span><i class="fas fa-check"></i> Auto Shut-off</span>
+              </div>
+              <div class="equipment-details">
+                <span class="price">$29.99</span>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(4.7/5)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usage tips section -->
+    <section class="usage-tips">
+      <div class="container">
+        <h2>Brewing Tips & Usage Guide</h2>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <i class="fas fa-thermometer-half"></i>
+            <h3>Water Temperature</h3>
+            <p>Use water between 195-205°F (90-96°C) for optimal extraction. Too hot water can over-extract and create bitter flavors.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Coffee Ratio</h3>
+            <p>Use a 1:15 to 1:17 coffee-to-water ratio. Start with 1:16 (1g coffee to 16g water) and adjust to taste.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-clock"></i>
+            <h3>Brewing Time</h3>
+            <p>Different methods require different times: Pour-over (3-4 min), French Press (4 min), Espresso (25-30 sec).</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-cog"></i>
+            <h3>Grind Size</h3>
+            <p>Match grind size to brewing method: Fine for espresso, medium for pour-over, coarse for French press.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer brand -->
+        <div class="footer-section">
+          <h3><i class="fas fa-coffee"></i> Bean Boutique</h3>
+          <p>Your premium coffee destination for exceptional blends and brewing experiences.</p>
+        </div>
+        
+        <!-- Quick links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coffee-selection.html">Coffee Selection</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="special-offers.html">Special Offers</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone"></i> (+1 123-487-9546)</p>
+          <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+        </div>
+        
+        <!-- Social media -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bean Boutique. All rights reserved. <br /> NCC L4DC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

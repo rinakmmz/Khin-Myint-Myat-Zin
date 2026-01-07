@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for responsive design and SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bean Boutique - Premium coffee shop offering unique blends, brewing equipment, and coffee workshops">
+  <title>Bean Boutique - Premium Coffee Experience</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header section with navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo and brand name -->
+      <div class="nav-brand">
+        <i class="fas fa-coffee"></i>
+        <span>Bean Boutique</span>
+      </div>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="coffee-selection.html" class="nav-link">Coffee Selection</a></li>
+        <li><a href="brewing-equipment.html" class="nav-link">Brewing Equipment</a></li>
+        <li><a href="shopping-cart.html" class="nav-link">Shopping Cart</a></li>
+        <li><a href="events.html" class="nav-link">Events & Workshops</a></li>
+        <li><a href="special-offers.html" class="nav-link">Special Offers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Hero section with background image -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to Bean Boutique</h1>
+        <p class="hero-subtitle">Discover the perfect blend of premium coffee and exceptional experience</p>
+        <button class="cta-button" onclick="scrollToSection('about')">Explore Our Story</button>
+      </div>
+      <!-- Search widget for finding content -->
+      <div class="search-widget">
+        <input type="text" id="searchInput" placeholder="Search our website...">
+        <button onclick="searchContent()"><i class="fas fa-search"></i></button>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Bean Boutique</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>At Bean Boutique, we are passionate about delivering the finest coffee experience. Our carefully curated selection of premium beans from around the world ensures every cup tells a story of quality and craftsmanship.</p>
+            <p>Founded in 2020, we have been serving coffee enthusiasts with unique blends, professional brewing equipment, and educational workshops that celebrate the art of coffee making.</p>
+          </div>
+          <div class="about-image">
+            <img src="bg2.jpg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features section with cards -->
+    <section class="features-section">
+      <div class="container">
+        <h2>Why Choose Bean Boutique?</h2>
+        <div class="features-grid">
+          <!-- Feature card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Premium Quality</h3>
+            <p>Sourced directly from the finest coffee farms worldwide, ensuring exceptional taste and freshness in every cup.</p>
+          </div>
+          
+          <!-- Feature card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Expert Baristas</h3>
+            <p>Our skilled baristas are passionate about coffee and dedicated to creating the perfect brewing experience for you.</p>
+          </div>
+          
+          <!-- Feature card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Community Focus</h3>
+            <p>We believe in building connections through coffee, creating a warm and welcoming space for all coffee lovers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular products section -->
+    <section class="popular-products">
+      <div class="container">
+        <h2>Popular Products</h2>
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <img src="latte.png" width="488" height="650" alt="Top view of a beautifully crafted latte with art on a marble table under dramatic lighting.">
+            <h3>Signature Latte</h3>
+            <p>Our house special with perfectly steamed milk and rich espresso</p>
+            <span class="price">$4.50</span>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="product-card">
+            <img src="arabica.png" width="975" height="650" alt="A detailed view of aromatic roasted Arabica coffee beans, highlighting texture and brown color.">
+            <h3>Premium Arabica Beans</h3>
+            <p>Freshly roasted premium Arabica beans with rich flavor profile</p>
+            <span class="price">$12.99</span>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="product-card">
+            <img src="maker.jpg" width="975" height="650" alt="Barista using syphon method to prepare coffee in a café setting. Indoors with coffee equipment.">
+            <h3>Syphon Brewing Kit</h3>
+            <p>Professional syphon brewing equipment for the perfect cup</p>
+            <span class="price">$89.99</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social media feed widget -->
+    <section class="social-feed">
+      <div class="container">
+        <h2>Follow Our Coffee Journey</h2>
+        <div class="social-widget">
+          <div class="social-post">
+            <div class="post-header">
+              <i class="fab fa-instagram"></i>
+              <span>@beanboutique</span>
+            </div>
+            <img src="ig.png" width="422" height="650" alt="Glass mug of coffee with milk being poured, surrounded by scattered coffee beans on a wooden table.">
+            <p>Fresh morning brew with our signature blend! ☕</p>
+          </div>
+          
+          <div class="social-post">
+            <div class="post-header">
+              <i class="fab fa-facebook"></i>
+              <span>Bean Boutique</span>
+            </div>
+            <img src="fb.png" width="1947" height="1300" alt="A close-up view of a professional espresso machine with syrup bottles in a coffee shop setting.">
+            <p>Behind the scenes: Our professional espresso machine in action!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location section -->
+    <section class="location-section">
+      <div class="container">
+        <h2>Visit Our Coffee Shop</h2>
+        <div class="location-content">
+          <div class="location-info">
+            <h3>Bean Boutique Location</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 12 Coffee Street, Downtown District, Coffee City, CC 1245</p>
+            <p><i class="fas fa-phone"></i> (+1 12348795)</p>
+            <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+            <div class="hours">
+              <h4>Opening Hours:</h4>
+              <p>Monday - Friday: 6:00 AM - 8:00 PM</p>
+              <p>Saturday - Sunday: 7:00 AM - 9:00 PM</p>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <div class="interactive-map">
+              <i class="fas fa-map"></i>
+              <p>Interactive Map</p>
+              <p>Click to view directions to Bean Boutique</p>
+              <button onclick="showDirections()">Get Directions</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer brand -->
+        <div class="footer-section">
+          <h3><i class="fas fa-coffee"></i> Bean Boutique</h3>
+          <p>Your premium coffee destination for exceptional blends and brewing experiences.</p>
+        </div>
+        
+        <!-- Quick links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="coffee-selection.html">Coffee Selection</a></li>
+            <li><a href="brewing-equipment.html">Equipment</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="special-offers.html">Special Offers</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone"></i> (+1 123-487-9546)</p>
+          <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+        </div>
+        
+        <!-- Social media -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bean Boutique. All rights reserved. <br/> NCC L4DC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Security notification widget -->
+  <div id="securityNotification" class="security-notification">
+    <i class="fas fa-shield-alt"></i>
+    <span>Your data is protected with SSL encryption</span>
+    <button onclick="closeSecurityNotification()">&times;</button>
+  </div>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

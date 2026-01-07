@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for responsive design and SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Bean Boutique's unique coffee blends and premium selections">
+  <title>Coffee Selection - Bean Boutique</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header section with navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo and brand name -->
+      <div class="nav-brand">
+        <i class="fas fa-coffee"></i>
+        <span>Bean Boutique</span>
+      </div>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="coffee-selection.html" class="nav-link active">Coffee Selection</a></li>
+        <li><a href="brewing-equipment.html" class="nav-link">Brewing Equipment</a></li>
+        <li><a href="shopping-cart.html" class="nav-link">Shopping Cart</a></li>
+        <li><a href="events.html" class="nav-link">Events & Workshops</a></li>
+        <li><a href="special-offers.html" class="nav-link">Special Offers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Our Coffee Selection</h1>
+        <p>Discover our unique blends and premium coffee varieties</p>
+      </div>
+    </section>
+
+    <!-- Search and filter section -->
+    <section class="filter-section">
+      <div class="container">
+        <!-- Animated search bar -->
+        <div class="search-container">
+          <input type="text" id="coffeeSearch" placeholder="Search for coffee blends..." onkeyup="filterCoffees()">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+        
+        <!-- Filter buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+          <button class="filter-btn" onclick="filterByCategory('light')">Light Roast</button>
+          <button class="filter-btn" onclick="filterByCategory('medium')">Medium Roast</button>
+          <button class="filter-btn" onclick="filterByCategory('dark')">Dark Roast</button>
+          <button class="filter-btn" onclick="filterByCategory('decaf')">Decaf</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coffee products grid -->
+    <section class="products-section">
+      <div class="container">
+        <div class="coffee-grid" id="coffeeGrid">
+          <!-- Coffee product 1 -->
+          <div class="coffee-card" data-category="medium">
+            <div class="coffee-image">
+              <img src="ethiopian.jpg" width="975" height="650" alt="A detailed view of aromatic roasted Arabica coffee beans, highlighting texture and brown color.">
+              <div class="coffee-overlay">
+                <button class="add-to-cart" onclick="addToCart('Ethiopian Highlands', 14.99)">Add to Cart</button>
+              </div>
+            </div>
+            <div class="coffee-info">
+              <h3>Ethiopian Highlands</h3>
+              <p class="coffee-origin">Origin: Ethiopia</p>
+              <p class="coffee-description">A medium roast with floral notes and bright acidity, perfect for pour-over brewing.</p>
+              <div class="coffee-details">
+                <span class="roast-level">Medium Roast</span>
+                <span class="price">$14.99</span>
+              </div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(4.8/5)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coffee product 2 -->
+          <div class="coffee-card" data-category="dark">
+            <div class="coffee-image">
+              <img src="dark.jpg" width="975" height="650" alt="Close-up of freshly roasted coffee beans in a large industrial coffee roaster, showcasing rich textures and warm tones.">
+              <div class="coffee-overlay">
+                <button class="add-to-cart" onclick="addToCart('Brazilian Bold', 16.99)">Add to Cart</button>
+              </div>
+            </div>
+            <div class="coffee-info">
+              <h3>Brazilian Bold</h3>
+              <p class="coffee-origin">Origin: Brazil</p>
+              <p class="coffee-description">A rich dark roast with chocolate undertones and a smooth, full-bodied finish.</p>
+              <div class="coffee-details">
+                <span class="roast-level">Dark Roast</span>
+                <span class="price">$16.99</span>
+              </div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(4.5/5)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coffee product 3 -->
+          <div class="coffee-card" data-category="light">
+            <div class="coffee-image">
+              <img src="colombian.jpg" width="975" height="650" alt="A detailed view of aromatic roasted Arabica coffee beans, highlighting texture and brown color.">
+              <div class="coffee-overlay">
+                <button class="add-to-cart" onclick="addToCart('Colombian Sunrise', 13.99)">Add to Cart</button>
+              </div>
+            </div>
+            <div class="coffee-info">
+              <h3>Colombian Sunrise</h3>
+              <p class="coffee-origin">Origin: Colombia</p>
+              <p class="coffee-description">A light roast with citrus notes and a clean, crisp finish that awakens your senses.</p>
+              <div class="coffee-details">
+                <span class="roast-level">Light Roast</span>
+                <span class="price">$13.99</span>
+              </div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(4.9/5)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coffee product 4 -->
+          <div class="coffee-card" data-category="medium">
+            <div class="coffee-image">
+              <img src="house.jpg" width="975" height="650" alt="Close-up of freshly roasted coffee beans in a large industrial coffee roaster, showcasing rich textures and warm tones.">
+              <div class="coffee-overlay">
+                <button class="add-to-cart" onclick="addToCart('House Blend', 12.99)">Add to Cart</button>
+              </div>
+            </div>
+            <div class="coffee-info">
+              <h3>House Blend</h3>
+              <p class="coffee-origin">Origin: Multi-Region</p>
+              <p class="coffee-description">Our signature medium roast blend with balanced flavor and smooth texture.</p>
+              <div class="coffee-details">
+                <span class="roast-level">Medium Roast</span>
+                <span class="price">$12.99</span>
+              </div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(4.6/5)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coffee product 5 -->
+          <div class="coffee-card" data-category="decaf">
+            <div class="coffee-image">
+              <img src="decaf.png" width="975" height="650" alt="A detailed view of aromatic roasted Arabica coffee beans, highlighting texture and brown color.">
+              <div class="coffee-overlay">
+                <button class="add-to-cart" onclick="addToCart('Decaf Delight', 15.99)">Add to Cart</button>
+              </div>
+            </div>
+            <div class="coffee-info">
+              <h3>Decaf Delight</h3>
+              <p class="coffee-origin">Origin: Guatemala</p>
+              <p class="coffee-description">A smooth decaffeinated coffee that doesn't compromise on flavor or quality.</p>
+              <div class="coffee-details">
+                <span class="roast-level">Decaf</span>
+                <span class="price">$15.99</span>
+              </div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(4.4/5)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coffee product 6 -->
+          <div class="coffee-card" data-category="dark">
+            <div class="coffee-image">
+              <img src="French.jpg" width="975" height="650" alt="Close-up of freshly roasted coffee beans in a large industrial coffee roaster, showcasing rich textures and warm tones.">
+              <div class="coffee-overlay">
+                <button class="add-to-cart" onclick="addToCart('French Roast Supreme', 17.99)">Add to Cart</button>
+              </div>
+            </div>
+            <div class="coffee-info">
+              <h3>French Roast Supreme</h3>
+              <p class="coffee-origin">Origin: Various</p>
+              <p class="coffee-description">An intense dark roast with bold, smoky flavors and a robust finish.</p>
+              <div class="coffee-details">
+                <span class="roast-level">Dark Roast</span>
+                <span class="price">$17.99</span>
+              </div>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(4.7/5)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coffee education section -->
+    <section class="coffee-education">
+      <div class="container">
+        <h2>Coffee Knowledge</h2>
+        <div class="education-grid">
+          <div class="education-card">
+            <h3>Roast Levels</h3>
+            <p>Learn about the differences between light, medium, and dark roasts and how they affect flavor profiles.</p>
+          </div>
+          <div class="education-card">
+            <h3>Brewing Methods</h3>
+            <p>Discover various brewing techniques and find the perfect method for your taste preferences.</p>
+          </div>
+          <div class="education-card">
+            <h3>Origin Stories</h3>
+            <p>Explore the unique characteristics of coffee from different regions around the world.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer brand -->
+        <div class="footer-section">
+          <h3><i class="fas fa-coffee"></i> Bean Boutique</h3>
+          <p>Your premium coffee destination for exceptional blends and brewing experiences.</p>
+        </div>
+        
+        <!-- Quick links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brewing-equipment.html">Equipment</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="special-offers.html">Special Offers</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone"></i> (+1 123-487-9546)</p>
+          <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+        </div>
+        
+        <!-- Social media -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bean Boutique. All rights reserved. <br/> NCC L4DC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

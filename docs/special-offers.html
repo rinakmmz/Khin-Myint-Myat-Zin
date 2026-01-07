@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for responsive design and SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Special offers and subscription services at Bean Boutique">
+  <title>Special Offers - Bean Boutique</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header section with navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo and brand name -->
+      <div class="nav-brand">
+        <i class="fas fa-coffee"></i>
+        <span>Bean Boutique</span>
+      </div>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="coffee-selection.html" class="nav-link">Coffee Selection</a></li>
+        <li><a href="brewing-equipment.html" class="nav-link">Brewing Equipment</a></li>
+        <li><a href="shopping-cart.html" class="nav-link">Shopping Cart</a></li>
+        <li><a href="events.html" class="nav-link">Events & Workshops</a></li>
+        <li><a href="special-offers.html" class="nav-link active">Special Offers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Special Offers & Subscriptions</h1>
+        <p>Save more with our exclusive deals and subscription services</p>
+      </div>
+    </section>
+
+    <!-- Current promotions -->
+    <section class="promotions-section">
+      <div class="container">
+        <h2>Current Promotions</h2>
+        <div class="promotions-grid">
+          <!-- Promotion 1 -->
+          <div class="promotion-card featured">
+            <div class="promotion-badge">Limited Time</div>
+            <div class="promotion-content">
+              <h3>New Customer Special</h3>
+              <div class="discount">25% OFF</div>
+              <p>Get 25% off your first order when you spend $50 or more. Perfect for trying our premium coffee selection.</p>
+              <div class="promo-code">
+                <span>Code: WELCOME25</span>
+                <button onclick="copyPromoCode('WELCOME25')">Copy</button>
+              </div>
+              <div class="promotion-validity">Valid until March 31, 2025</div>
+            </div>
+          </div>
+
+          <!-- Promotion 2 -->
+          <div class="promotion-card">
+            <div class="promotion-content">
+              <h3>Free Shipping Weekend</h3>
+              <div class="discount">FREE SHIPPING</div>
+              <p>Enjoy free shipping on all orders this weekend. No minimum purchase required.</p>
+              <div class="promo-code">
+                <span>Code: FREESHIP</span>
+                <button onclick="copyPromoCode('FREESHIP')">Copy</button>
+              </div>
+              <div class="promotion-validity">Valid: Feb 15-16, 2025</div>
+            </div>
+          </div>
+
+          <!-- Promotion 3 -->
+          <div class="promotion-card">
+            <div class="promotion-content">
+              <h3>Bundle & Save</h3>
+              <div class="discount">Buy 2 Get 1</div>
+              <p>Buy any two coffee bags and get the third one free. Mix and match any varieties.</p>
+              <div class="promo-code">
+                <span>Code: BUNDLE3</span>
+                <button onclick="copyPromoCode('BUNDLE3')">Copy</button>
+              </div>
+              <div class="promotion-validity">Valid until February 28, 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscription plans -->
+    <section class="subscription-section">
+      <div class="container">
+        <h2>Coffee Subscription Plans</h2>
+        <p class="subscription-intro">Never run out of your favorite coffee with our flexible subscription service</p>
+        
+        <div class="subscription-plans">
+          <!-- Basic Plan -->
+          <div class="subscription-card">
+            <div class="plan-header">
+              <h3>Coffee Explorer</h3>
+              <div class="plan-price">
+                <span class="price">$19.99</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <ul>
+                <li><i class="fas fa-check"></i> 1 bag of coffee per month</li>
+                <li><i class="fas fa-check"></i> Curated selection by our experts</li>
+                <li><i class="fas fa-check"></i> Free shipping included</li>
+                <li><i class="fas fa-check"></i> 10% discount on additional purchases</li>
+                <li><i class="fas fa-check"></i> Cancel anytime</li>
+              </ul>
+            </div>
+            <button class="subscribe-btn" onclick="openSubscription('Coffee Explorer', 19.99)">Subscribe Now</button>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="subscription-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <div class="plan-header">
+              <h3>Coffee Connoisseur</h3>
+              <div class="plan-price">
+                <span class="price">$34.99</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <ul>
+                <li><i class="fas fa-check"></i> 2 bags of coffee per month</li>
+                <li><i class="fas fa-check"></i> Premium and rare varieties</li>
+                <li><i class="fas fa-check"></i> Free shipping included</li>
+                <li><i class="fas fa-check"></i> 15% discount on additional purchases</li>
+                <li><i class="fas fa-check"></i> Exclusive access to limited editions</li>
+                <li><i class="fas fa-check"></i> Monthly brewing tips newsletter</li>
+                <li><i class="fas fa-check"></i> Cancel anytime</li>
+              </ul>
+            </div>
+            <button class="subscribe-btn" onclick="openSubscription('Coffee Connoisseur', 34.99)">Subscribe Now</button>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="subscription-card">
+            <div class="plan-header">
+              <h3>Coffee Master</h3>
+              <div class="plan-price">
+                <span class="price">$49.99</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <div class="plan-features">
+              <ul>
+                <li><i class="fas fa-check"></i> 3 bags of coffee per month</li>
+                <li><i class="fas fa-check"></i> Ultra-premium and micro-lot coffees</li>
+                <li><i class="fas fa-check"></i> Free shipping included</li>
+                <li><i class="fas fa-check"></i> 20% discount on additional purchases</li>
+                <li><i class="fas fa-check"></i> Priority access to new releases</li>
+                <li><i class="fas fa-check"></i> Monthly brewing equipment samples</li>
+                <li><i class="fas fa-check"></i> Exclusive workshop invitations</li>
+                <li><i class="fas fa-check"></i> Cancel anytime</li>
+              </ul>
+            </div>
+            <button class="subscribe-btn" onclick="openSubscription('Coffee Master', 49.99)">Subscribe Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscription benefits -->
+    <section class="subscription-benefits">
+      <div class="container">
+        <h2>Subscription Benefits</h2>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <i class="fas fa-truck"></i>
+            <h3>Free Shipping</h3>
+            <p>All subscription orders include free shipping directly to your door</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Flexible Delivery</h3>
+            <p>Choose your delivery frequency and pause or skip shipments anytime</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-star"></i>
+            <h3>Exclusive Access</h3>
+            <p>Get first access to new coffee releases and limited edition blends</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-percentage"></i>
+            <h3>Member Discounts</h3>
+            <p>Enjoy exclusive discounts on additional purchases and equipment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loyalty program -->
+    <section class="loyalty-program">
+      <div class="container">
+        <h2>Bean Boutique Rewards</h2>
+        <div class="loyalty-content">
+          <div class="loyalty-info">
+            <h3>Earn Points with Every Purchase</h3>
+            <div class="points-system">
+              <div class="points-item">
+                <span class="points">1 Point</span>
+                <span class="action">= $1 Spent</span>
+              </div>
+              <div class="points-item">
+                <span class="points">100 Points</span>
+                <span class="action">= $10 Reward</span>
+              </div>
+            </div>
+            <div class="loyalty-benefits">
+              <h4>Member Benefits:</h4>
+              <ul>
+                <li>Birthday month 20% discount</li>
+                <li>Early access to sales and events</li>
+                <li>Free coffee on your 10th visit</li>
+                <li>Exclusive member-only workshops</li>
+              </ul>
+            </div>
+            <button class="join-loyalty-btn" onclick="openLoyaltySignup()">Join Rewards Program</button>
+          </div>
+          <div class="loyalty-visual">
+            <div class="rewards-card">
+              <div class="card-header">
+                <h4>Bean Boutique Rewards</h4>
+                <i class="fas fa-coffee"></i>
+              </div>
+              <div class="card-body">
+                <p>Member Name</p>
+                <div class="points-display">
+                  <span class="current-points">0</span>
+                  <span class="points-label">Points</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Subscription modal -->
+  <div id="subscriptionModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSubscriptionModal()">&times;</span>
+      <h2>Coffee Subscription</h2>
+      <div id="subscriptionDetails"></div>
+      <form id="subscriptionForm">
+        <!-- Personal information -->
+        <div class="form-section">
+          <h3>Personal Information</h3>
+          <div class="form-row">
+            <input type="text" id="subFirstName" placeholder="First Name" required>
+            <input type="text" id="subLastName" placeholder="Last Name" required>
+          </div>
+          <input type="email" id="subEmail" placeholder="Email Address" required>
+          <input type="tel" id="subPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Delivery preferences -->
+        <div class="form-section">
+          <h3>Delivery Preferences</h3>
+          <label for="deliveryFrequency">Delivery Frequency:</label>
+          <select id="deliveryFrequency" required>
+            <option value="">Select frequency</option>
+            <option value="weekly">Weekly</option>
+            <option value="biweekly">Every 2 weeks</option>
+            <option value="monthly">Monthly</option>
+          </select>
+          
+          <label for="grindPreference">Grind Preference:</label>
+          <select id="grindPreference" required>
+            <option value="">Select grind</option>
+            <option value="whole-bean">Whole Bean</option>
+            <option value="coarse">Coarse Grind</option>
+            <option value="medium">Medium Grind</option>
+            <option value="fine">Fine Grind</option>
+          </select>
+        </div>
+
+        <!-- Shipping address -->
+        <div class="form-section">
+          <h3>Shipping Address</h3>
+          <input type="text" id="subAddress" placeholder="Street Address" required>
+          <div class="form-row">
+            <input type="text" id="subCity" placeholder="City" required>
+            <input type="text" id="subState" placeholder="State" required>
+            <input type="text" id="subZip" placeholder="ZIP Code" required>
+          </div>
+        </div>
+
+        <button type="submit" class="subscribe-submit-btn">
+          <i class="fas fa-coffee"></i>
+          Start Subscription
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Loyalty signup modal -->
+  <div id="loyaltyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoyaltyModal()">&times;</span>
+      <h2>Join Bean Boutique Rewards</h2>
+      <form id="loyaltyForm">
+        <div class="form-section">
+          <h3>Create Your Account</h3>
+          <div class="form-row">
+            <input type="text" id="loyaltyFirstName" placeholder="First Name" required>
+            <input type="text" id="loyaltyLastName" placeholder="Last Name" required>
+          </div>
+          <input type="email" id="loyaltyEmail" placeholder="Email Address" required>
+          <input type="tel" id="loyaltyPhone" placeholder="Phone Number" required>
+          <input type="date" id="loyaltyBirthday" placeholder="Birthday (for special offers)" required>
+        </div>
+
+        <div class="form-section">
+          <h3>Preferences</h3>
+          <label>
+            <input type="checkbox" id="emailOffers" checked>
+            Receive email offers and updates
+          </label>
+          <label>
+            <input type="checkbox" id="smsOffers">
+            Receive SMS notifications for special deals
+          </label>
+        </div>
+
+        <button type="submit" class="loyalty-submit-btn">
+          <i class="fas fa-star"></i>
+          Join Rewards Program
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer brand -->
+        <div class="footer-section">
+          <h3><i class="fas fa-coffee"></i> Bean Boutique</h3>
+          <p>Your premium coffee destination for exceptional blends and brewing experiences.</p>
+        </div>
+        
+        <!-- Quick links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coffee-selection.html">Coffee Selection</a></li>
+            <li><a href="brewing-equipment.html">Equipment</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone"></i> (+1 123-487-9546)</p>
+          <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+        </div>
+        
+        <!-- Social media -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bean Boutique. All rights reserved. <br /> NCC L4DC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
