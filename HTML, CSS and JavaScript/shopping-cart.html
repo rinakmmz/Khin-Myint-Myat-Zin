@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for responsive design and SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shopping cart for Bean Boutique - Review and purchase your coffee selections">
+  <title>Shopping Cart - Bean Boutique</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header section with navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo and brand name -->
+      <div class="nav-brand">
+        <i class="fas fa-coffee"></i>
+        <span>Bean Boutique</span>
+      </div>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="coffee-selection.html" class="nav-link">Coffee Selection</a></li>
+        <li><a href="brewing-equipment.html" class="nav-link">Brewing Equipment</a></li>
+        <li><a href="shopping-cart.html" class="nav-link active">Shopping Cart</a></li>
+        <li><a href="events.html" class="nav-link">Events & Workshops</a></li>
+        <li><a href="special-offers.html" class="nav-link">Special Offers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Shopping Cart</h1>
+        <p>Review your selections and proceed to checkout</p>
+      </div>
+    </section>
+
+    <!-- Shopping cart content -->
+    <section class="cart-section">
+      <div class="container">
+        <div class="cart-layout">
+          <!-- Cart items -->
+          <div class="cart-items">
+            <h2>Your Items</h2>
+            <div id="cartItemsContainer">
+              <!-- Cart items will be dynamically loaded here -->
+              <div class="empty-cart" id="emptyCart">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Your cart is empty</h3>
+                <p>Add some delicious coffee or equipment to get started!</p>
+                <a href="coffee-selection.html" class="shop-now-btn">Shop Coffee</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cart summary -->
+          <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-details">
+              <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping:</span>
+                <span id="shipping">$5.99</span>
+              </div>
+              <div class="summary-row">
+                <span>Tax:</span>
+                <span id="tax">$0.00</span>
+              </div>
+              <hr>
+              <div class="summary-row total">
+                <span>Total:</span>
+                <span id="total">$0.00</span>
+              </div>
+            </div>
+
+            <!-- Promo code section -->
+            <div class="promo-section">
+              <h3>Promo Code</h3>
+              <div class="promo-input">
+                <input type="text" id="promoCode" placeholder="Enter promo code">
+                <button onclick="applyPromoCode()">Apply</button>
+              </div>
+            </div>
+
+            <!-- Checkout button -->
+            <button class="checkout-btn" onclick="proceedToCheckout()" id="checkoutBtn" disabled>
+              <i class="fas fa-lock"></i>
+              Proceed to Checkout
+            </button>
+
+            <!-- Security badge -->
+            <div class="security-badge">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure SSL Encryption</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommended products -->
+        <section class="recommended-products">
+          <h2>You Might Also Like</h2>
+          <div class="recommended-grid">
+            <div class="recommended-item">
+              <img src="platte.png" width="488" height="650" alt="Top view of a beautifully crafted latte with art on a marble table under dramatic lighting.">
+              <h3>Premium Latte Blend</h3>
+              <span class="price">$15.99</span>
+              <button onclick="addToCart('Premium Latte Blend', 15.99)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+              <img src="Organic.png" width="975" height="650" alt="A detailed view of aromatic roasted Arabica coffee beans, highlighting texture and brown color.">
+              <h3>Organic Coffee Beans</h3>
+              <span class="price">$18.99</span>
+              <button onclick="addToCart('Organic Coffee Beans', 18.99)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+              <img src="filter.png" width="975" height="650" alt="Barista using syphon method to prepare coffee in a café setting. Indoors with coffee equipment.">
+              <h3>Coffee Filter Set</h3>
+              <span class="price">$12.99</span>
+              <button onclick="addToCart('Coffee Filter Set', 12.99)">Add to Cart</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Checkout modal -->
+    <div id="checkoutModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCheckoutModal()">&times;</span>
+        <h2>Checkout</h2>
+        <form id="checkoutForm">
+          <!-- Customer information -->
+          <div class="form-section">
+            <h3>Customer Information</h3>
+            <div class="form-row">
+              <input type="text" id="firstName" placeholder="First Name" required>
+              <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+          </div>
+
+          <!-- Shipping address -->
+          <div class="form-section">
+            <h3>Shipping Address</h3>
+            <input type="text" id="address" placeholder="Street Address" required>
+            <div class="form-row">
+              <input type="text" id="city" placeholder="City" required>
+              <input type="text" id="state" placeholder="State" required>
+              <input type="text" id="zipCode" placeholder="ZIP Code" required>
+            </div>
+          </div>
+
+          <!-- Payment information -->
+          <div class="form-section">
+            <h3>Payment Information</h3>
+            <input type="text" id="cardNumber" placeholder="Card Number" required>
+            <div class="form-row">
+              <input type="text" id="expiryDate" placeholder="MM/YY" required>
+              <input type="text" id="cvv" placeholder="CVV" required>
+            </div>
+            <input type="text" id="cardName" placeholder="Name on Card" required>
+          </div>
+
+          <button type="submit" class="place-order-btn">
+            <i class="fas fa-credit-card"></i>
+            Place Order
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer brand -->
+        <div class="footer-section">
+          <h3><i class="fas fa-coffee"></i> Bean Boutique</h3>
+          <p>Your premium coffee destination for exceptional blends and brewing experiences.</p>
+        </div>
+        
+        <!-- Quick links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coffee-selection.html">Coffee Selection</a></li>
+            <li><a href="brewing-equipment.html">Equipment</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone"></i> (+1 123-487-9546)</p>
+          <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+        </div>
+        
+        <!-- Social media -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bean Boutique. All rights reserved. <br /> NCC L4DC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

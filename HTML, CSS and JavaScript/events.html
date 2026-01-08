@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for responsive design and SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coffee workshops and events at Bean Boutique - Learn from expert baristas">
+  <title>Events & Workshops - Bean Boutique</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header section with navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo and brand name -->
+      <div class="nav-brand">
+        <i class="fas fa-coffee"></i>
+        <span>Bean Boutique</span>
+      </div>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="coffee-selection.html" class="nav-link">Coffee Selection</a></li>
+        <li><a href="brewing-equipment.html" class="nav-link">Brewing Equipment</a></li>
+        <li><a href="shopping-cart.html" class="nav-link">Shopping Cart</a></li>
+        <li><a href="events.html" class="nav-link active">Events & Workshops</a></li>
+        <li><a href="special-offers.html" class="nav-link">Special Offers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Events & Workshops</h1>
+        <p>Learn the art of coffee making from our expert baristas</p>
+      </div>
+    </section>
+
+    <!-- Upcoming events -->
+    <section class="events-section">
+      <div class="container">
+        <h2>Upcoming Events</h2>
+        <div class="events-grid">
+          <!-- Event 1 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="coffeeroasting.png" width="975" height="650" alt="A worker in a coffee roastery operating equipment, processing fresh beans in an industrial setting.">
+              <div class="event-date">
+                <span class="day">15</span>
+                <span class="month">FEB</span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3>Coffee Roasting Workshop</h3>
+              <div class="event-details">
+                <p><i class="fas fa-calendar"></i> February 15, 2025</p>
+                <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                <p><i class="fas fa-users"></i> Max 12 participants</p>
+                <p><i class="fas fa-dollar-sign"></i> $45 per person</p>
+              </div>
+              <p class="event-description">Learn the art of coffee roasting from bean to cup. Understand different roast profiles and how they affect flavor.</p>
+              <button class="register-btn" onclick="openRegistration('Coffee Roasting Workshop', '2025-02-15', 45)">Register Now</button>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="latteart.png" width="433" height="650" alt="Overhead view of technician operating coffee roasting equipment in an industrial setting.">
+              <div class="event-date">
+                <span class="day">22</span>
+                <span class="month">FEB</span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3>Latte Art Masterclass</h3>
+              <div class="event-details">
+                <p><i class="fas fa-calendar"></i> February 22, 2025</p>
+                <p><i class="fas fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                <p><i class="fas fa-users"></i> Max 8 participants</p>
+                <p><i class="fas fa-dollar-sign"></i> $35 per person</p>
+              </div>
+              <p class="event-description">Master the techniques of creating beautiful latte art. From basic hearts to complex rosetta patterns.</p>
+              <button class="register-btn" onclick="openRegistration('Latte Art Masterclass', '2025-02-22', 35)">Register Now</button>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="brewing.png" width="975" height="650" alt="Barista using syphon method to prepare coffee in a café setting. Indoors with coffee equipment.">
+              <div class="event-date">
+                <span class="day">01</span>
+                <span class="month">MAR</span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3>Brewing Methods Workshop</h3>
+              <div class="event-details">
+                <p><i class="fas fa-calendar"></i> March 1, 2025</p>
+                <p><i class="fas fa-clock"></i> 1:00 PM - 3:30 PM</p>
+                <p><i class="fas fa-users"></i> Max 10 participants</p>
+                <p><i class="fas fa-dollar-sign"></i> $40 per person</p>
+              </div>
+              <p class="event-description">Explore different brewing methods including pour-over, French press, and syphon brewing techniques.</p>
+              <button class="register-btn" onclick="openRegistration('Brewing Methods Workshop', '2025-03-01', 40)">Register Now</button>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="cupping.png" width="434" height="650" alt="A cheerful barista stands confidently with folded arms in a stylish coffee shop.">
+              <div class="event-date">
+                <span class="day">08</span>
+                <span class="month">MAR</span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3>Coffee Cupping Session</h3>
+              <div class="event-details">
+                <p><i class="fas fa-calendar"></i> March 8, 2025</p>
+                <p><i class="fas fa-clock"></i> 3:00 PM - 5:00 PM</p>
+                <p><i class="fas fa-users"></i> Max 15 participants</p>
+                <p><i class="fas fa-dollar-sign"></i> $25 per person</p>
+              </div>
+              <p class="event-description">Develop your palate and learn to identify different flavor notes in coffee through professional cupping techniques.</p>
+              <button class="register-btn" onclick="openRegistration('Coffee Cupping Session', '2025-03-08', 25)">Register Now</button>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="espressofundamentals.jpg" width="366" height="650" alt="Barista in hijab brewing coffee in a Madiun café, Indonesia.">
+              <div class="event-date">
+                <span class="day">15</span>
+                <span class="month">MAR</span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3>Espresso Fundamentals</h3>
+              <div class="event-details">
+                <p><i class="fas fa-calendar"></i> March 15, 2025</p>
+                <p><i class="fas fa-clock"></i> 11:00 AM - 1:00 PM</p>
+                <p><i class="fas fa-users"></i> Max 6 participants</p>
+                <p><i class="fas fa-dollar-sign"></i> $50 per person</p>
+              </div>
+              <p class="event-description">Learn the fundamentals of espresso extraction, including grind size, timing, and pressure for the perfect shot.</p>
+              <button class="register-btn" onclick="openRegistration('Espresso Fundamentals', '2025-03-15', 50)">Register Now</button>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="event-card">
+            <div class="event-image">
+              <img src="homebarista.png" width="867" height="1300" alt="Barista in a grey apron pouring freshly brewed coffee into a glass cup indoors.">
+              <div class="event-date">
+                <span class="day">22</span>
+                <span class="month">MAR</span>
+              </div>
+            </div>
+            <div class="event-info">
+              <h3>Home Barista Bootcamp</h3>
+              <div class="event-details">
+                <p><i class="fas fa-calendar"></i> March 22, 2025</p>
+                <p><i class="fas fa-clock"></i> 9:00 AM - 12:00 PM</p>
+                <p><i class="fas fa-users"></i> Max 8 participants</p>
+                <p><i class="fas fa-dollar-sign"></i> $60 per person</p>
+              </div>
+              <p class="event-description">Comprehensive workshop covering everything you need to know to make café-quality coffee at home.</p>
+              <button class="register-btn" onclick="openRegistration('Home Barista Bootcamp', '2025-03-22', 60)">Register Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshop benefits -->
+    <section class="workshop-benefits">
+      <div class="container">
+        <h2>Why Join Our Workshops?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Expert Instruction</h3>
+            <p>Learn from certified baristas with years of professional experience in the coffee industry.</p>
+          </div>
+          <div class="benefit-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Hands-On Learning</h3>
+            <p>Practice with professional equipment and receive personalized feedback on your technique.</p>
+          </div>
+          <div class="benefit-card">
+            <i class="fas fa-certificate"></i>
+            <h3>Certificate of Completion</h3>
+            <p>Receive a certificate for each workshop you complete to showcase your coffee skills.</p>
+          </div>
+          <div class="benefit-card">
+            <i class="fas fa-gift"></i>
+            <h3>Take-Home Goodies</h3>
+            <p>Each workshop includes coffee samples, recipes, and sometimes equipment to practice at home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Registration modal -->
+  <div id="registrationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRegistrationModal()">&times;</span>
+      <h2>Event Registration</h2>
+      <div id="eventDetails"></div>
+      <form id="registrationForm">
+        <!-- Personal information -->
+        <div class="form-section">
+          <h3>Personal Information</h3>
+          <div class="form-row">
+            <input type="text" id="regFirstName" placeholder="First Name" required>
+            <input type="text" id="regLastName" placeholder="Last Name" required>
+          </div>
+          <input type="email" id="regEmail" placeholder="Email Address" required>
+          <input type="tel" id="regPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Additional information -->
+        <div class="form-section">
+          <h3>Additional Information</h3>
+          <label for="experience">Coffee Experience Level:</label>
+          <select id="experience" required>
+            <option value="">Select your level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+          
+          <label for="dietary">Dietary Restrictions (if any):</label>
+          <textarea id="dietary" placeholder="Please let us know about any allergies or dietary restrictions"></textarea>
+        </div>
+
+        <!-- Payment section -->
+        <div class="form-section">
+          <h3>Payment Information</h3>
+          <div class="payment-summary">
+            <div class="payment-row">
+              <span>Workshop Fee:</span>
+              <span id="workshopFee">$0</span>
+            </div>
+            <div class="payment-row total">
+              <span>Total:</span>
+              <span id="totalFee">$0</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="register-submit-btn">
+          <i class="fas fa-calendar-check"></i>
+          Complete Registration
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer brand -->
+        <div class="footer-section">
+          <h3><i class="fas fa-coffee"></i> Bean Boutique</h3>
+          <p>Your premium coffee destination for exceptional blends and brewing experiences.</p>
+        </div>
+        
+        <!-- Quick links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coffee-selection.html">Coffee Selection</a></li>
+            <li><a href="brewing-equipment.html">Equipment</a></li>
+            <li><a href="special-offers.html">Special Offers</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone"></i> (+1 123-487-9546)</p>
+          <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+        </div>
+        
+        <!-- Social media -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bean Boutique. All rights reserved. <br /> NCC L4DC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
